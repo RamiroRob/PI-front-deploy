@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   const getInfo = () => {
-    axios.get('http://localhost:3001/videogames')
+    axios.get('/videogames')
       .then(res => res.data)
       .then(res => {
         dispatch(getVideogames(res))

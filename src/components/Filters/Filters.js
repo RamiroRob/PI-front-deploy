@@ -47,7 +47,7 @@ export default function Filters() {
         dispatch(selectGenre("TODOS"))
    
         async function getGenre() {
-            const response = await fetch('http://localhost:3001/genres')
+            const response = await fetch('https://pi-back-deploy-production-2e3a.up.railway.app/genres')
             const response2 = await response.json()
             const allGenres = response2.map(genre => genre.name)
             setGenres(allGenres)

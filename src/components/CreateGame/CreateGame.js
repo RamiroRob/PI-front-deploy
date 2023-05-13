@@ -115,7 +115,7 @@ export default function CreateGame() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        fetch('http://localhost:3001/videogames', {
+        fetch('https://pi-back-deploy-production-2e3a.up.railway.app/videogames', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

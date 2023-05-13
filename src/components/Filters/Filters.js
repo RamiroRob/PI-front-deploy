@@ -22,7 +22,7 @@ export default function Filters() {
     const handleSearch = async () => {
         
         try {
-            const response = await axios.get(`http://localhost:3001/videogames?name=${name}`);
+            const response = await axios.get(`videogames?name=${name}`);
             dispatch(setSearchResults(response.data));
             
         } catch (error) {
@@ -47,7 +47,7 @@ export default function Filters() {
         dispatch(selectGenre("TODOS"))
    
         async function getGenre() {
-            const response = await fetch('https://pi-back-deploy-production-2e3a.up.railway.app/genres')
+            const response = await fetch('https://pi-back-deploy-production1.up.railway.app/genres')
             const response2 = await response.json()
             const allGenres = response2.map(genre => genre.name)
             setGenres(allGenres)

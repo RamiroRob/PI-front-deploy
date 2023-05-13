@@ -21,7 +21,7 @@ function App() {
   
   useEffect(() => {
     getInfo()
-  }, [])
+  })
 
   const getInfo = () => {
     axios.get('videogames')

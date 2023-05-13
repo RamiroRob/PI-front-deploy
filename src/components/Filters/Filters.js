@@ -55,7 +55,7 @@ export default function Filters() {
         }
         getGenre()
 
-    }, [])
+    })
     
     //Antes tenia estados locales para todo, pero simplifique el codigo y manejo los estados directo en el reducer. Por eso no hay mas estados locales.
     const handleDataSource = (e) => {
